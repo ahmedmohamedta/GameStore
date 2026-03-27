@@ -1,0 +1,243 @@
+[
+  {
+    "id": 1,
+    "name": "Cyberpunk 2077",
+    "price": 59.99,
+    "category": "RPG",
+    "image": "/converted/s1.webp",
+    "gallery": [
+      "/converted/sS-1.webp",
+      "/converted/s2-2.webp"
+    ],
+    "description": "لعبة عالم مفتوح في مدينة المستقبل.",
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "FIFA 23",
+    "price": 49.99,
+    "category": "Sports",
+    "image": "/converted/fifa23.webp",
+    "gallery": [
+      "/"
+    ],
+    "description": "أحدث إصدار من لعبة كرة القدم الشهيرة.",
+    "rating": 4.2
+  },
+  {
+    "id": 3,
+    "name": "God of War Ragnarök",
+    "price": 69.99,
+    "category": "Action",
+    "image": "/converted/g1.webp",
+    "gallery": [
+      "/"
+    ],
+    "description": "استمرار ملحمة كريتوس في عالم الأساطير الإسكندنافية.",
+    "rating": 4.8
+  },
+  {
+    "id": 4,
+    "name": "Elden Ring",
+    "price": 59.99,
+    "category": "Action",
+    "image": "/converted/elden1.webp",
+    "gallery": [
+      "/converted/elden2.webp"
+    ],
+    "description": "عالم مفتوح مليء بالتحديات والغموض.",
+    "rating": 4.9
+  },
+  {
+    "id": 5,
+    "name": "Red Dead Redemption 2",
+    "price": 39.99,
+    "category": "Action",
+    "image": "/converted/red1.webp",
+    "gallery": [
+      "/converted/red2.webp"
+    ],
+    "description": "ملحمة الغرب الأمريكي في عالم مفتوح.",
+    "rating": 4.9
+  },
+  {
+    "id": 6,
+    "name": "The Witcher 3: Wild Hunt",
+    "price": 29.99,
+    "category": "RPG",
+    "image": "/converted/w1.webp",
+    "gallery": [
+      "/converted/w2.webp"
+    ],
+    "description": "مغامرة جرالت في عالم مليء بالوحوش.",
+    "rating": 4.8
+  },
+  {
+    "id": 7,
+    "name": "Grand Theft Auto V",
+    "price": 29.99,
+    "category": "Action",
+    "image": "/converted/gata1.webp",
+    "gallery": [
+      "/converted/gata2.webp"
+    ],
+    "description": "عالم جريمة مفتوح في لوس سانتوس.",
+    "rating": 4.7
+  },
+  {
+    "id": 8,
+    "name": "Minecraft",
+    "price": 26.95,
+    "category": "Adventure",
+    "image": "/converted/min1.webp",
+    "gallery": [
+      "/converted/min2.webp"
+    ],
+    "description": "عالم من المكعبات والإبداع اللامحدود.",
+    "rating": 4.8
+  },
+  {
+    "id": 9,
+    "name": "Call of Duty: Modern Warfare II",
+    "price": 69.99,
+    "category": "Shooter",
+    "image": "/converted/call1.webp",
+    "gallery": [
+      "/converted/call2.webp"
+    ],
+    "description": "أحدث إصدار من سلسلة الأكشن الشهيرة.",
+    "rating": 4.3
+  },
+  {
+    "id": 10,
+    "name": "Hogwarts Legacy",
+    "price": 59.99,
+    "category": "RPG",
+    "image": "/converted/hog1.webp",
+    "gallery": [
+      "/converted/hog2.webp"
+    ],
+    "description": "عيش حياة الساحر في عالم هاري بوتر.",
+    "rating": 4.7
+  },
+  {
+    "id": 11,
+    "name": "Spider-Man: Miles Morales",
+    "price": 49.99,
+    "category": "Action",
+    "image": "/converted/spider1.webp",
+    "gallery": [
+      "/converted/spider2.webp"
+    ],
+    "description": "مغامرات مايلز موراليس في نيويورك.",
+    "rating": 4.6
+  },
+  {
+    "id": 12,
+    "name": "Horizon Forbidden West",
+    "price": 49.99,
+    "category": "Action",
+    "image": "/converted/for1.webp",
+    "gallery": [
+      "/converted/hor2.webp"
+    ],
+    "description": "مغامرة آلو في عالم ما بعد الكارثة.",
+    "rating": 4.7
+  },
+  {
+    "id": 13,
+    "name": "Forza Horizon 5",
+    "price": 59.99,
+    "category": "Racing",
+    "image": "/converted/car1.webp",
+    "gallery": [
+      "/converted/car2.webp"
+    ],
+    "description": "سباق سيارات في عالم مفتوح بالمكسيك.",
+    "rating": 4.8
+  },
+  {
+    "id": 14,
+    "name": "Resident Evil Village",
+    "price": 39.99,
+    "category": "Horror",
+    "image": "/converted/vill1.webp",
+    "gallery": [
+      "/converted/vil2.webp"
+    ],
+    "description": "رعب البقاء في قرية غامضة.",
+    "rating": 4.4
+  },
+  {
+    "id": 15,
+    "name": "Assassin's Creed Valhalla",
+    "price": 49.99,
+    "category": "RPG",
+    "image": "/converted/ass1.webp",
+    "gallery": [
+      "/converted/asss2.webp"
+    ],
+    "description": "مغامرة الفايكنغ في إنجلترا.",
+    "rating": 4.5
+  },
+  {
+    "id": 16,
+    "name": "Final Fantasy VII Remake",
+    "price": 59.99,
+    "category": "RPG",
+    "image": "/converted/fan1.webp",
+    "gallery": [
+      "/converted/fan2.webp"
+    ],
+    "description": "إعادة إحياء لعبة الـ RPG الكلاسيكية.",
+    "rating": 4.7
+  },
+  {
+    "id": 17,
+    "name": "Ghost of Tsushima",
+    "price": 49.99,
+    "category": "Action",
+    "image": "/converted/gost1.webp",
+    "gallery": [
+      "/converted/gost2.webp"
+    ],
+    "description": "الدفاع عن اليابان من الغزو المغولي.",
+    "rating": 4.8
+  },
+  {
+    "id": 18,
+    "name": "The Last of Us Part II",
+    "price": 39.99,
+    "category": "Action",
+    "image": "/converted/last1.webp",
+    "gallery": [
+      "/converted/last2.webp"
+    ],
+    "description": "قصة مؤثرة في عالم ما بعد الكارثة.",
+    "rating": 4.6
+  },
+  {
+    "id": 19,
+    "name": "Death Stranding",
+    "price": 29.99,
+    "category": "Adventure",
+    "image": "/converted/death1.webp",
+    "gallery": [
+      "/converted/death2.webp"
+    ],
+    "description": "عالم غريب من تأليف هيديو كوجيما.",
+    "rating": 4.2
+  },
+  {
+    "id": 20,
+    "name": "Sekiro: Shadows Die Twice",
+    "price": 59.99,
+    "category": "Action",
+    "image": "/converted/sekiro1.webp",
+    "gallery": [
+      "/converted/sek2.webp"
+    ],
+    "description": "لعبة أكشن صعبة في فترة الساموراي.",
+    "rating": 4.7
+  }
+]
