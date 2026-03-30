@@ -5,6 +5,9 @@ import App from './App';
 import './index.css';
 import { ThemeProvider } from './context/ThemeContext';
 import { Helmet } from 'react-helmet-async';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({ duration: 800, once: true });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

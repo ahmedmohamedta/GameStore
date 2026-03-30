@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1001,
+    "userEmail": "sara@example.com",
+    "date": "2026-03-26 15:20:00",
+    "total": 119.98,
+    "status": "تم الشحن",
+    "items": [
+      { "id": 1, "name": "Cyberpunk 2077", "price": 59.99, "quantity": 1 },
+      { "id": 3, "name": "God of War Ragnarök", "price": 59.99, "quantity": 1 }
+    ]
+  },
+  {
+    "id": 1002,
+    "userEmail": "mahmoud@example.com",
+    "date": "2026-03-27 10:05:00",
+    "total": 49.99,
+    "status": "قيد المعالجة",
+    "items": [
+      { "id": 2, "name": "FIFA 23", "price": 49.99, "quantity": 1 }
+    ]
+  }
+]

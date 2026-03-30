@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { saveCart } from '../utils/cart';
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -15,33 +14,40 @@ const Checkout = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // في Checkout.jsx
-const handleSubmit = (e) => {
-  e.preventDefault();
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
-  const user = JSON.parse(localStorage.getItem('user')) || { email: 'guest' };
-  
-  const order = {
-    id: Date.now(),
-    userEmail: user.email,
-    items: cart,
-    total,
-    status: 'قيد المعالجة',
-    date: new Date().toLocaleString('ar-EG'),
-  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const orders = JSON.parse(localStorage.getItem('orders')) || [];
-  orders.push(order);
-  localStorage.setItem('orders', JSON.stringify(orders));
-  
-  // إفراغ السلة
-  localStorage.setItem('cart', JSON.stringify([]));
-  window.dispatchEvent(new Event('cartUpdated'));
-  
-  alert('تم تأكيد الطلب بنجاح!');
-  navigate('/');
-};
+    // جلب السلة والمستخدم
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+    const user = JSON.parse(localStorage.getItem('user')) || { email: 'guest' };
+
+    // إنشاء الطلب
+    const order = {
+      id: Date.now(),
+      userEmail: user.email,
+      items: cart,
+      total,
+      status: 'قيد المعالجة',
+      date: new Date().toLocaleString('ar-EG'),
+      // يمكن إضافة معلومات النموذج إن أردت:
+      // name: formData.name,
+      // address: formData.address,
+      // phone: formData.phone
+    };
+
+    // حفظ الطلب في localStorage
+    const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+    orders.push(order);
+    localStorage.setItem('orders', JSON.stringify(orders));
+
+    // إفراغ السلة
+    localStorage.setItem('cart', JSON.stringify([]));
+    window.dispatchEvent(new Event('cartUpdated'));
+
+    alert('✅ تم تأكيد الطلب بنجاح!');
+    navigate('/');
+  };
 
   return (
     <main className="pt-32 container mx-auto px-4 max-w-2xl">

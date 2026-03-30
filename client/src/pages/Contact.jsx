@@ -13,14 +13,16 @@ const Contact = () => {
     e.preventDefault();
     // حفظ الرسالة في localStorage (كما هو)
     const messages = JSON.parse(localStorage.getItem('messages') || '[]');
-    const newMessage = {
-      id: Date.now(),
-      ...formData,
-      date: new Date().toLocaleString('ar-EG'),
-      read: false,
-    };
-    messages.push(newMessage);
-    localStorage.setItem('messages', JSON.stringify(messages));
+const newMessage = {
+  id: Date.now(),
+  name: formData.name,
+  email: formData.email,
+  message: formData.message,
+  date: new Date().toLocaleString('ar-EG'),
+  read: false
+};
+messages.push(newMessage);
+localStorage.setItem('messages', JSON.stringify(messages));
 
     setSuccess(true);
     setFormData({ name: '', email: '', message: '' });

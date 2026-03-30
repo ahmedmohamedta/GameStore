@@ -120,7 +120,7 @@ const Navbar = () => {
             {/* الشعار */}
             <Link to="/" className="flex items-center gap-2 group" onClick={handleLinkClick}>
               <img 
-                src="/src/images/game.png" 
+                src="/converted/game.png" 
                 alt="GameStore"
                 className="h-7 sm:h-10 w-auto transition-all duration-300 group-hover:filter group-hover:drop-shadow-[0_0_15px_var(--primary-color)] group-hover:scale-110" 
               />

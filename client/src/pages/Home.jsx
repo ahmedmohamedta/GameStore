@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <main className="pt-32 container mx-auto  px-2">
       {/* ===== HERO SECTION ===== */}
-      <section className="relative h-[500px] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('/src/images/hero-bg.jpg')" }}>
+      <section className="relative h-[500px] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('/converted/hero-bg.jpg')" }}>
         <div className="absolute inset-0 glass bg-opacity-60 backdrop-blur-sm"></div>
         <motion.div
           className="relative text-center text-white px-4"
@@ -61,7 +61,7 @@ const Home = () => {
   >
     {/* اللوجو مع حركة عائمة ومهتزة */}
     <motion.img 
-      src="/src/images/game.png" 
+      src="/converted/game.png" 
       alt="GameStore Logo" 
       className="w-24 h-24 md:w-32 md:h-32 mb-4 drop-shadow-[0_0_30px_var(--primary-color)]"
       animate={{

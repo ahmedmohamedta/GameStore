@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "sara ahmed",
+    "email": "sara@example.com",
+    "message": "المنتجات رائعة، شكراً لكم!",
+    "date": "2026-03-25 14:30:00",
+    "read": false
+  },
+  {
+    "id": 2,
+    "name": "mahmoud ali",
+    "email": "mahmoud@example.com",
+    "message": "هل يمكن إضافة لعبة Call of Duty الجديدة؟",
+    "date": "2026-03-26 09:15:00",
+    "read": false
+  },
+  {
+    "id": 3,
+    "name": "marwan atia",
+    "email": "marwan@example.com",
+    "message": "لوحة التحكم ممتازة، شكراً",
+    "date": "2026-03-27 20:45:00",
+    "read": true
+  }
+]

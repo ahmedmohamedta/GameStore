@@ -51,31 +51,27 @@ const Admin = () => {
   }, [navigate]);
 
   const loadData = async () => {
-    setLoading(true);
-    try {
-      let storedProducts = JSON.parse(localStorage.getItem('products') || '[]');
-      if (storedProducts.length === 0) {
-        // const apiProducts = await fetchProducts();
-        // storedProducts = apiProducts.map(p => ({ ...p, featured: false }));
-        localStorage.setItem('products', JSON.stringify(storedProducts));
-      }
-      setProducts(storedProducts);
-      extractCategories(storedProducts);
-
-      const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
-      setUsers(storedUsers);
-
-      const storedOrders = JSON.parse(localStorage.getItem('orders') || '[]');
-      setOrders(storedOrders);
-
-      const storedMessages = JSON.parse(localStorage.getItem('messages') || '[]');
-      setMessages(storedMessages);
-    } catch (error) {
-      console.error('خطأ في تحميل البيانات:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  setLoading(true);
+  try {
+    let storedProducts = JSON.parse(localStorage.getItem('products') || '[]');
+    setProducts(storedProducts);
+    extractCategories(storedProducts); 
+    
+    
+    const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
+    setUsers(storedUsers);
+    
+    const storedOrders = JSON.parse(localStorage.getItem('orders') || '[]');
+    setOrders(storedOrders);
+    
+    const storedMessages = JSON.parse(localStorage.getItem('messages') || '[]');
+    setMessages(storedMessages);
+  } catch (error) {
+    console.error('خطأ في تحميل البيانات:', error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleImageUpload = (e) => {
   const file = e.target.files[0];
@@ -430,6 +426,7 @@ const handleProductSubmit = (e) => {
                       />
                     </td>
                     <td className="py-3 px-4">
+                      
                       <button
                         onClick={() => handleEditProduct(product)}
                         className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-lg ml-2 hover:bg-blue-500 hover:text-white transition"
@@ -451,59 +448,65 @@ const handleProductSubmit = (e) => {
         </motion.div>
       )}
 
-      {/* المستخدمين */}
       {activeTab === 'users' && (
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          className="glass p-6"
-        >
-          <h2 className="text-2xl font-bold mb-4 text-[--primary-color]">المستخدمين</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-right">
-              <thead className="bg-gray-800 text-[--primary-color]">
-                <tr>
-                  <th className="py-3 px-4">الاسم</th>
-                  <th className="py-3 px-4">البريد الإلكتروني</th>
-                  <th className="py-3 px-4">نوع الحساب</th>
-                  <th className="py-3 px-4">إجراءات</th>
-                </tr>
-              </thead>
-              <tbody>
-                {users.map(u => (
-                  <motion.tr
-                    key={u.email}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="border-b border-gray-700 hover:bg-gray-800/50 transition"
-                  >
-                    <td className="py-3 px-4">{u.name}</td>
-                    <td className="py-3 px-4">{u.email}</td>
-                    <td className="py-3 px-4">
-                      {u.isAdmin ? (
-                        <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">أدمن</span>
-                      ) : (
-                        <span className="bg-gray-500/20 text-gray-400 px-3 py-1 rounded-full text-sm">عادي</span>
-                      )}
-                    </td>
-                    <td className="py-3 px-4">
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        onClick={() => handleDeleteUser(u.email)}
-                        className="bg-red-500/20 text-red-400 px-3 py-1 rounded-lg hover:bg-red-500 hover:text-white transition disabled:opacity-50 disabled:cursor-not-allowed"
-                        disabled={u.isAdmin}
-                      >
-                        <i className="fas fa-trash ml-1"></i> حذف
-                      </motion.button>
-                    </td>
-                  </motion.tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </motion.div>
-      )}
+  <motion.div
+    initial={{ opacity: 0, x: 20 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -20 }}
+    className="glass p-6"
+  >
+    <h2 className="text-2xl font-bold mb-4 text-[--primary-color]">المستخدمين</h2>
+    <div className="overflow-x-auto">
+      <table className="w-full text-right">
+        <thead className="bg-gray-800 text-[--primary-color]">
+          <tr>
+            <th className="py-3 px-4">الاسم</th>
+            <th className="py-3 px-4">البريد الإلكتروني</th>
+            <th className="py-3 px-4">نوع الحساب</th>
+            <th className="py-3 px-4">إجراءات</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map(u => (
+            <motion.tr
+              key={u.email}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="border-b border-gray-700 hover:bg-gray-800/50 transition"
+            >
+              <td className="py-3 px-4">{u.name}</td>
+              <td className="py-3 px-4">{u.email}</td>
+              <td className="py-3 px-4">
+                {u.isAdmin ? (
+                  <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">أدمن</span>
+                ) : (
+                  <span className="bg-gray-500/20 text-gray-400 px-3 py-1 rounded-full text-sm">عادي</span>
+                )}
+              </td>
+              <td className="py-3 px-4">
+                <button
+                  onClick={() => navigate(`/admin/user/${encodeURIComponent(u.email)}`)}
+                  className="bg-green-500/20 text-green-400 px-3 py-1 rounded-lg ml-2 hover:bg-green-500 hover:text-white transition"
+                  title="عرض الملف الشخصي"
+                >
+                  <i className="fas fa-user"></i> عرض
+                </button>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  onClick={() => handleDeleteUser(u.email)}
+                  className="bg-red-500/20 text-red-400 px-3 py-1 rounded-lg hover:bg-red-500 hover:text-white transition disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={u.isAdmin}
+                >
+                  <i className="fas fa-trash ml-1"></i> حذف
+                </motion.button>
+              </td>
+            </motion.tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </motion.div>
+)}
 
       {/* الطلبات */}
       {activeTab === 'orders' && (
